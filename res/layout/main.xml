@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:orientation="vertical"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+		android:layout_weight="1"
+	>
+		<ScrollView
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="1"
+		    android:background="@color/verydarkgreen"
+	    >
+	    	<TextView
+	    		android:id="@+id/outputPane"
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+	    	/>
+		</ScrollView>	
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/enterCommandLine"
+		    android:orientation="horizontal"
+		    android:layout_width="fill_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_weight="0"
+		    android:paddingBottom="30px"
+		    >
+			<AutoCompleteTextView
+				android:id="@+id/enterCommand"
+			    android:layout_width="fill_parent" 
+			    android:layout_height="wrap_content" 
+			    android:hint="or type a command..."
+			    android:layout_weight="1"
+			 />
+			<Button  
+				android:id="@+id/showHistory"
+			    android:layout_width="wrap_content" 
+			    android:layout_height="wrap_content" 
+			    android:text="History"
+			    android:layout_weight="0"
+			 />
+		</LinearLayout>
+	</LinearLayout>
+	 <SlidingDrawer 
+	 		android:id="@+id/SlidingDrawer" 
+	 		android:handle="@+id/slideHandleButton" 
+	 		android:content="@+id/contentLayout" 
+	 		android:padding="10dip" 
+	 		android:layout_height="wrap_content"
+	 		android:layout_width="wrap_content"
+		    android:orientation="vertical"
+		    android:layout_weight="0"
+	 >    
+	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			android:id="@+id/contentLayout"
+	    android:orientation="horizontal"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+		android:layout_weight="1"
+		android:paddingLeft="15px"
+		android:paddingRight="15px"
+	>
+		<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		    android:orientation="vertical"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight="0"
+		    android:background="@color/lightgray"
+		android:paddingTop="5px"
+		android:paddingLeft="10px"
+		android:paddingRight="10px"
+		    >
+		 	<HorizontalScrollView
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_weight="0"
+		    >
+				<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+					android:id="@+id/directoryPicker"
+				    android:orientation="horizontal"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+			    >
+				</LinearLayout>
+			</HorizontalScrollView>
+			<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+				android:id="@+id/directoryPicker"
+			    android:orientation="horizontal"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+		    >
+				<Button  
+					android:id="@+id/showServices"
+				    android:layout_width="wrap_content" 
+				    android:layout_height="wrap_content" 
+				    android:layout_weight="0"
+				    android:text="Start/Stop service"
+				 />
+				<Button  
+					android:id="@+id/phpProd"
+				    android:layout_width="wrap_content" 
+				    android:layout_height="wrap_content" 
+				    android:layout_weight="0"
+				    android:text="Run php cli in Prod"
+				 />
+			</LinearLayout>
+			 <ListView
+				android:id="@+id/fileList"
+			    android:layout_width="fill_parent" 
+			    android:layout_height="wrap_content"
+			    android:background="@color/screenbackground"
+			    android:layout_weight="1"
+			 />
+			 <CheckBox
+				android:id="@+id/hiddenFilesCheckbox"
+			    android:layout_width="fill_parent" 
+			    android:layout_height="wrap_content"
+			 	android:text="Show hidden files"
+			    android:layout_weight="0"
+			 />
+		</LinearLayout>
+		</LinearLayout>
+		 <Button 
+		 		android:layout_width="fill_parent" 
+		 		android:id="@+id/slideHandleButton" 
+		 		android:text="File Manager"
+		 		android:width="200px"
+		 		android:layout_height="30px"
+		 		android:background="@drawable/button"
+		 />
+	</SlidingDrawer>
+</FrameLayout>

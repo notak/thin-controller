@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<color name="lightgray">#c4c7c4</color>
+<color name="white">#FFFFFF</color>
+<color name="darkred">#770000</color>
+<color name="darkgreen">#007700</color>
+<color name="verydarkgreen">#003300</color>
+<color name="darkblue">#000077</color>
+<color name="logobackground">#2c2c2c</color>
+<color name="screenbackground">#2c2c2c</color>
+</resources>

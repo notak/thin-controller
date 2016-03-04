@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/root"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+	<TextView android:id="@+id/infoLine"
+		android:text="Check checkbox if param should be quoted"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	/>
+	<EditText android:id="@+id/command"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	/>
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="150px"
+	>
+		<TableLayout
+			android:id="@+id/paramsTable"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:stretchColumns="0"
+			android:padding="5px"
+			>
+		</TableLayout>
+	</ScrollView>
+</LinearLayout>
